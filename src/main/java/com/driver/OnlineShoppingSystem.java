@@ -24,7 +24,10 @@ public class OnlineShoppingSystem {
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
-
+            if(choice==4){
+                cart.displayCart();
+                continue;
+            }
             if (choice == 5) {
                 break;
             }
@@ -53,9 +56,6 @@ public class OnlineShoppingSystem {
                     System.out.print("Enter Author: ");
                     author = scanner.nextLine();
                     cart.addProduct(new Book(productId, productName, price, author));
-                    break;
-                case 4:
-                    cart.displayCart();
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");

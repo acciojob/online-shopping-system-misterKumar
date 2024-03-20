@@ -7,6 +7,9 @@ public abstract class Product {
 
     public Product(int productId, String productName, double price) {
         // your code goes here
+        this.productId = productId;
+        this.productName = productName;
+        this.price = price;
     }
 
     public int getProductId() {
